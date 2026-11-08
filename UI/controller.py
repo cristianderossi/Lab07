@@ -2,6 +2,7 @@ import flet as ft
 from UI.view import View
 from model.model import Model
 
+
 '''
     CONTROLLER:
     - Funziona da intermediario tra MODELLO e VIEW
@@ -20,8 +21,24 @@ class Controller:
     # POPOLA DROPDOWN
     # TODO
 
+    def popola_drop_down(self):
+
+     biblioteche=self._model.get_biblioteche()
+     libri=self._model.get_generi()
+
+
     # CALLBACKS DROPDOWN
     # TODO
 
+
+
+
     # AZIONE: MOSTRA LIBRI
     # TODO
+
+
+
+
+
+
+
