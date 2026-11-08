@@ -68,7 +68,7 @@ class Controller:
 
         else:
             for l in libro:
-                self._view.lista_libri.controls.append(ft.text(str(l)))
+                self._view.lista_libri.controls.append(ft.Text(str(l)))
 
         self._view.update()
 

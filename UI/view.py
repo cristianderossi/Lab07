@@ -46,6 +46,11 @@ class View:
 
         row_filtri=ft.Row([self.tendina_biblioteca, self.tendina_libri])
 
+        self.btn_mostra_libri = ft.Button("Mostra Libri", on_click=self.controller.mostra_libri)
+        self.lista_libri = ft.ListView(expand=True, spacing=5, padding=10)
+        container_lista = ft.Container(content=self.lista_libri, height=300,
+                                       border=ft.Border.all(1, ft.Colors.OUTLINE))
+
 
         # --- Toggle Tema ---
         self.toggle_cambia_tema = ft.Switch(label="Tema scuro", value=True, on_change=self.cambia_tema)
@@ -62,21 +67,21 @@ class View:
             # TODO
 
             row_filtri,
-            ft.Divider())
+            ft.Divider()
 
 
             # Sezione 3: Libri
             # TODO
 
-        self.btn_mostra_libri=ft.Button("Mostra Libri", on_click=self.controller.mostra_libri)
-        self.lista_libri = ft.ListView(expand=True, spacing=5, padding=10)
-        container_lista = ft.Container(content=self.lista_libri, height=300,
-                                       border=ft.Border.all(1, ft.Colors.OUTLINE))
+            self.btn_mostra_libri,container_lista
+
+        )
 
 
 
 
 
+        # Sezione 3: Libri
 
 
         self.page.scroll = "adaptive"
