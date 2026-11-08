@@ -67,7 +67,7 @@ class View:
             # TODO
 
             row_filtri,
-            ft.Divider()
+            ft.Divider(),
 
 
             # Sezione 3: Libri
