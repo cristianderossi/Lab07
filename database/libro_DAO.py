@@ -1,4 +1,3 @@
-from rich.table import Row
 
 from database.DB_connect import DBConnect
 from model.biblioteca_DTO import Biblioteca

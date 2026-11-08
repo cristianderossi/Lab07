@@ -24,7 +24,7 @@ class BibliotecaDAO:
         try:
 
             query = """
-               SELECT  id, nome indirizzo 
+               SELECT  id, nome , indirizzo 
                FROM  biblioteca b 
                order by nome
 
