@@ -44,8 +44,7 @@ class View:
 
         self.controller.popola_dropdown()
 
-        # Sezione 3: Libri
-        # TODO
+        row_filtri=ft.Row([self.tendina_biblioteca, self.tendina_libri])
 
 
         # --- Toggle Tema ---
@@ -62,9 +61,23 @@ class View:
             # Sezione 2: Filtraggio
             # TODO
 
+            row_filtri,
+            ft.Divider())
+
+
             # Sezione 3: Libri
             # TODO
-        )
+
+        self.btn_mostra_libri=ft.Button("Mostra Libri", on_click=self.controller.mostra_libri)
+        self.lista_libri = ft.ListView(expand=True, spacing=5, padding=10)
+        container_lista = ft.Container(content=self.lista_libri, height=300,
+                                       border=ft.Border.all(1, ft.Colors.OUTLINE))
+
+
+
+
+
+
 
         self.page.scroll = "adaptive"
         self.page.update()

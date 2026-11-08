@@ -57,6 +57,25 @@ class Controller:
     # AZIONE: MOSTRA LIBRI
     # TODO
 
+    def mostra_libri(self, e ):
+
+        libro=self._model.get_libri_filtrati(self.biblioteca_selezionata, self.genere_selezionato)
+
+        self._view.lista_libri.controls.clear()
+
+        if len(libro)==0:
+            self._view.show_alert("nessun libro soddisfa i requisiti")
+
+        else:
+            for l in libro:
+                self._view.lista_libri.controls.append(ft.text(str(l)))
+
+        self._view.update()
+
+
+
+
+
 
 
 
