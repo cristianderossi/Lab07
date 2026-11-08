@@ -38,8 +38,15 @@ class View:
         # --- Sezione 2: Filtraggio ---
         # TODO
 
+        self.tendina_libri=ft.Dropdown(label="Genere", width=300, on_select=self.controller.on_genere_select)
+
+        self.tendina_biblioteca=ft.Dropdown(label="Biblioteca",width=300, on_select=self.controller.on_biblioteca_select)
+
+        self.controller.popola_dropdown()
+
         # Sezione 3: Libri
         # TODO
+
 
         # --- Toggle Tema ---
         self.toggle_cambia_tema = ft.Switch(label="Tema scuro", value=True, on_change=self.cambia_tema)

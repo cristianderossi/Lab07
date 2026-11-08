@@ -21,20 +21,42 @@ class Controller:
     # POPOLA DROPDOWN
     # TODO
 
-    def popola_drop_down(self):
+    def popola_dropdown(self):
 
-     biblioteche=self._model.get_biblioteche()
-     libri=self._model.get_generi()
+        self._view.tendina_libri.options.append(ft.dropdown.Option(key="none",text="nessun filtro"))
+        libri=self._model.get_generi()
+        for libro in libri:
+            self._view.tendina_libri.options.append(ft.dropdown.Option(key=libro,text=libro))
 
+
+        self._view.tendina_biblioteca.options.append(ft.dropdown.Option(key="none",text="nessun filtro"))
+        biblioteca=self._model.get_biblioteche()
+        for b in biblioteca:
+            self._view.tendina_biblioteca.options.append(ft.dropdown.Option(key=str(b.id),text=b.nome))
 
     # CALLBACKS DROPDOWN
     # TODO
+
+    def on_genere_select(self,e):
+        v=e.control.value
+        if v is None or v=="none":
+            self.genere_selezionato=None
+        else:
+            self.genere_selezionato=v
+
+    def on_biblioteca_select(self,e):
+        v=e.control.value
+        if v is None or v=="none":
+            self.biblioteca_selezionata=None
+        else:
+            self.biblioteca_selezionata=int(v)
 
 
 
 
     # AZIONE: MOSTRA LIBRI
     # TODO
+
 
 
 
